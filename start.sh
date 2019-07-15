@@ -1,4 +1,5 @@
 #!/bin/bash
+shopt -s extglob; set +H
 megadl --path=mc.zip ${MEGA_URL}
 unzip mc.zip -d /data-temp
 #mv -v data-temp/*/* data/
