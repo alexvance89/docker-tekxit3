@@ -6,8 +6,10 @@ services:
     build: .
     ports:
       - "26656:25565"
+      - "26666:26666" # for rcon
     volumes:
       - "mc-tekkit:/data"
+      - "./server.properties:/data/server.properties"
     environment:
       EULA: "TRUE"
       INIT_MEM: "4G"
@@ -16,7 +18,7 @@ services:
     labels:
       - "traefik.frontend.rule=Host:mc-tekkit.stephan-makowski.de"
       - "traefik.docker.network=www"
-      - "--noconsole"
+      - "--nogui"
     networks:
       - www
 
