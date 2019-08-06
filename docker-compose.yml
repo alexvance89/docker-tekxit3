@@ -16,8 +16,6 @@ services:
       MAX_MEM: "8G"
     restart: always
     labels:
-      - "traefik.frontend.rule=Host:mc-tekkit.stephan-makowski.de"
-      - "traefik.docker.network=www"
       - "--nogui"
     networks:
       - www
