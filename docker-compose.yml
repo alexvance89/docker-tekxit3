@@ -1,0 +1,29 @@
+version: '3'
+# Other docker-compose examples in /examples
+
+services:
+  minecraft-tekkit:
+    build: .
+    ports:
+      - "26656:25565"
+      - "26666:26666" # for rcon
+    volumes:
+      - "mc-tekkit:/data"
+      - "./server.properties:/data/server.properties"
+    environment:
+      EULA: "TRUE"
+      INIT_MEM: "4G"
+      MAX_MEM: "8G"
+    restart: always
+    labels:
+      - "--nogui"
+    networks:
+      - www
+
+networks:
+  www:
+    external:
+      name: www
+
+volumes:
+  mc-tekkit: {}
