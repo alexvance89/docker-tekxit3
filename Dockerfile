@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk                                                                                                                          
+FROM --platform=linux/arm64 openjdk:8-jdk                                                                                                                          
 WORKDIR /
 
 EXPOSE 25565
