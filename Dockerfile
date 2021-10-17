@@ -5,9 +5,9 @@ EXPOSE 25565
 
 VOLUME [ "/data" ]
 
-ENV URL=https://www.tekx.it/downloads/0.981Tekxit3Server.zip                                                                            
-ENV INIT_MEM=4G
-ENV MAX_MEM=4G
+ENV URL=https://www.tekxit.xyz/downloads/1.0.2TekxitPiServer.zip                                                                           
+ENV INIT_MEM=2G
+ENV MAX_MEM=3G
 
 RUN apt-get update -y && apt-get install unzip wget -y --no-install-recommends 
 
